@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="140dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="116dp"
+        android:layout_marginBottom="15dp"
+        android:adjustViewBounds="true"
+        android:cropToPadding="true"
+        android:src="@drawable/logohyt"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toStartOf="@+id/notif2"
+        app:layout_constraintHorizontal_bias="0.149"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/notif2"
+        android:layout_width="32dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="14dp"
+        android:onClick="notip"
+        android:src="@drawable/ic_baseline_notifications_24"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="416dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/ic_grid1"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="-3dp"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_marginTop="2dp"
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_lives"
+            android:drawableTint="@color/putih"
+            android:text=" Live Streaming"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/textt"
+            android:visibility="invisible"/>
+
+    </LinearLayout>
+
+
+    <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+        android:id="@+id/idExoPlayerView"
+        android:layout_width="411dp"
+        android:layout_height="207dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:ignore="ImageContrastCheck" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="204dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idExoPlayerView">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="88dp"
+                android:layout_height="83dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="50dp"
+                android:backgroundTint="@color/putih"
+                android:drawableTop="@drawable/ic_live_tv"
+                android:drawableTint="@color/black"
+                android:onClick="yutub"
+                android:text="Live TV"
+                android:textAllCaps="false"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="88dp"
+                android:layout_height="83dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="13dp"
+                android:layout_marginRight="50dp"
+                android:backgroundTint="@color/putih"
+                android:drawableTop="@drawable/ic_schedule"
+                android:drawableTint="@color/black"
+                android:onClick="jadwall"
+                android:text="Jadwal"
+                android:textAllCaps="false"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="88dp"
+                android:layout_height="83dp"
+                android:layout_marginTop="25dp"
+                android:backgroundTint="@color/putih"
+                android:drawableTop="@drawable/ic_live_tv"
+                android:drawableTint="@color/black"
+                android:onClick="artikell"
+                android:text="Artikel"
+                android:textAllCaps="false"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="88dp"
+                android:layout_height="83dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="50dp"
+                android:backgroundTint="@color/putih"
+                android:drawableTop="@drawable/ic_kontak"
+                android:drawableTint="@color/black"
+                android:onClick="kontak"
+                android:text="Kontak"
+                android:textAllCaps="false"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="88dp"
+                android:layout_height="83dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="13dp"
+                android:layout_marginRight="50dp"
+                android:backgroundTint="@color/putih"
+                android:drawableTop="@drawable/ic_pertanyaan"
+                android:drawableTint="@color/black"
+                android:onClick="pertanyaann"
+                android:text="Pertanyaan"
+                android:textAllCaps="false"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="88dp"
+                android:layout_height="83dp"
+                android:layout_marginTop="25dp"
+
+                android:backgroundTint="@color/putih"
+                android:drawableTop="@drawable/ic_qna"
+                android:drawableTint="@color/black"
+                android:onClick="info"
+                android:text="Info"
+                android:textAllCaps="false"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
